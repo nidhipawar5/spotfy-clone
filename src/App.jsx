@@ -34,9 +34,17 @@ const App = () => {
                     type: 'SET_USER',
                     user: user
                 })
-            })
+            });
+
+            spotify.getUserPlaylists().then((playlists) => 
+              dispatch({
+                type:'SET_PLAYLISTS',
+                playlists: playlists
+              })
+            );
         }
     }, [])
+    
     //console.log("person",user)
     //console.log("here is token==",token)
 

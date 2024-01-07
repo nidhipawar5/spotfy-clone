@@ -1,4 +1,8 @@
 .body{
-    border: 1px solid red;
     flex: 0.8;
+    background: linear-gradient(transparent, rgba(0,0,0,1));
+    background-color: rgb(91, 87, 115);
+    height: 100vh;
+    color: white;
+    padding: 30px;
 }
