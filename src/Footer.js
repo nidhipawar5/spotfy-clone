@@ -1,4 +1,4 @@
-import React,{ useEffect } from 'react'
+import React,{ useState, useEffect } from 'react'
 import './Footer.css'
 import PlayCircleOutlineIcon from "@mui/icons-material/PlayCircleOutline";
 import SkipPreviousIcon from "@mui/icons-material/SkipPrevious";
@@ -12,25 +12,25 @@ import Slider from "@mui/material/Slider";
 import Grid from "@mui/material/Grid"
 import { useDataLayerValue } from './DataLayer'
 
-function Footer(spotify) {
-
+function Footer({spotify}) {
+  
   const [{ token, item, playing }, dispatch] = useDataLayerValue();
 
-  useEffect(() => {
-  //   spotify.getMyCurrentPlaybackState().then((r) => {
-  //     console.log(r);
-
-  //     dispatch({
-  //       type: "SET_PLAYING",
-  //       playing: r.is_playing,
+  // useEffect(() => {
+  //     spotify.getMyCurrentPlaybackState().then((r) => {
+  //       console.log(r);
+  
+  //       dispatch({
+  //         type: "SET_PLAYING",
+  //         playing: r.is_playing,
+  //       });
+  
+  //       dispatch({
+  //         type: "SET_ITEM",
+  //         item: r.item,
+  //       });
   //     });
-
-  //     dispatch({
-  //       type: "SET_ITEM",
-  //       item: r.item,
-  //     });
-  //   });
-   }, [spotify]);
+  // }, [spotify]);
 
   const handlePlayPause = () => {
     if (playing) {
@@ -79,7 +79,7 @@ function Footer(spotify) {
   return (
     <div className='footer'>
 
-      {/* left part of footer */}
+      {/* left part of footer - song info*/}
       <div className='footer_left'>
         <img
           className="footer_albumLogo"
@@ -99,7 +99,7 @@ function Footer(spotify) {
         )}
       </div>
 
-      {/* center part of footer */}
+      {/* center part of footer - song playing buttons*/}
       <div className='footer_center'>
 
         <ShuffleIcon
@@ -137,7 +137,7 @@ function Footer(spotify) {
         />
       </div>
 
-      {/* right part of footer */}
+      {/* right part of footer - colume controls */}
       <div className='footer_right'>
         <Grid container spacing={2}>
           <Grid item>

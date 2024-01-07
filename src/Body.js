@@ -14,7 +14,8 @@ function Body({spotify}) {
   const playPlaylist = (id) => {
     spotify
       .play({
-        context_uri: `spotify:playlist:37i9dQZEVXcJZyENOWUFo7`,
+        //context_uri: `spotify:playlist:37i9dQZEVXcJZyENOWUFo7`,
+        context_uri: `spotify:playlist:3mBkKZYtWRmFLrKyKc2IyF`
       })
       .then((res) => {
         spotify.getMyCurrentPlayingTrack().then((r) => {
@@ -70,7 +71,8 @@ function Body({spotify}) {
             <FavoriteIcon fontSize="large" />
             <MoreHorizIcon />
           </div>
-
+          
+          {/* song list */}
           {discover_weekly?.tracks.items.map((item) => (
             <SongRow playSong={playSong} track={item.track} />
           ))}

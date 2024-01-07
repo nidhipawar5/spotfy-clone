@@ -8,7 +8,7 @@ import { useDataLayerValue } from './DataLayer'
 
 //creating a contructor from installed package spotify-web-api-js
 const spotify = new SpotifyWebApi();
-
+console.log('Spotify Object:', spotify);
 const App = () => {
 
     //using dispatch to shoot at data layer
@@ -43,7 +43,7 @@ const App = () => {
                 })
             );
 
-            spotify.getPlaylist("37i9dQZEVXcJZyENOWUFo7").then((response) =>
+            spotify.getPlaylist("3mBkKZYtWRmFLrKyKc2IyF").then((response) =>
                 dispatch({
                     type: "SET_DISCOVER_WEEKLY",
                     discover_weekly: response,
