@@ -1,15 +1,3 @@
-
-
-
-
-https://github.com/nidhipawar5/spotfy-clone/assets/69379762/4be686c9-3f14-4e91-bd85-d097328f3916
-
-
-
-
-
-
-
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
